@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AssemblyName>Without.Systems.QrCode.Library</AssemblyName>
+        <RootNamespace>Without.Systems.QrCode</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="OutSystems.ExternalLibraries.SDK" Version="1.4.0"/>
+        <PackageReference Include="QRCoder" Version="1.4.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Resources\QRCoder.png" />
+      <EmbeddedResource Include="Resources\QRCoder.png" />
+    </ItemGroup>
+
+</Project>

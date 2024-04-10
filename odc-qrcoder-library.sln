@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QRCoder.Library", "QRCoder.Library\QRCoder.Library.csproj", "{9A2DEB25-5ACD-4DAF-826B-E25B5933C8AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QRCoder.Test", "QRCoder.Test\QRCoder.Test.csproj", "{DA095A7F-F713-4FE4-8A7A-25E94D49EDC0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9A2DEB25-5ACD-4DAF-826B-E25B5933C8AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A2DEB25-5ACD-4DAF-826B-E25B5933C8AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A2DEB25-5ACD-4DAF-826B-E25B5933C8AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A2DEB25-5ACD-4DAF-826B-E25B5933C8AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA095A7F-F713-4FE4-8A7A-25E94D49EDC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA095A7F-F713-4FE4-8A7A-25E94D49EDC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA095A7F-F713-4FE4-8A7A-25E94D49EDC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA095A7F-F713-4FE4-8A7A-25E94D49EDC0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
