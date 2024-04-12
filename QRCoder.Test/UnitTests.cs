@@ -18,4 +18,10 @@ public class Tests
 
         Assert.That(result, Is.EqualTo(expectedResult));
     }
+
+    [Test(Description = "Color Test")]
+    public void Create_Colored_QrCode()
+    {
+        File.WriteAllBytes(@"C:\dev\colorcode.png",_actions.GeneratePngCode("https://without.systems", "#FF00FF"));
+    }
 }

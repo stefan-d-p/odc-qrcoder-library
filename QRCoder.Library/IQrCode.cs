@@ -21,6 +21,14 @@ namespace Without.Systems.QrCode
                 DataType = OSDataType.Text)]
             string payload,
             [OSParameter(
+                Description = "Color as HEX code for dark patterns. Defaults to #000000",
+                DataType = OSDataType.Text)]
+            string darkColor = "#000000",
+            [OSParameter(
+                Description = "Color as HEX code for light patterns. Defaults to #FFFFFF",
+                DataType = OSDataType.Text)]
+            string lightColor = "#FFFFFF",
+            [OSParameter(
                 Description =
                     "Error correction level. Can have one of the following values: L - 7% may be lost before recovery is not possible, M - 15% may be lost before recovery is possible, Q - 25% may be lost before recovery, H - 30% may be lost before recovery. Defaults to M",
                 DataType = OSDataType.Text)]
