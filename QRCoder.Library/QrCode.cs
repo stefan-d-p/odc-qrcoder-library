@@ -19,18 +19,15 @@ public class QrCode : IQrCode
     /// <returns>PNG image as byte array</returns>
     public byte[] GeneratePngCode(string payload, string darkColor = "#000000", string lightColor = "#FFFFFF", string eccLevel = "M", int pixelsPerModule = 20, bool drawQuietZones = true)
     {
-        QRCodeGenerator.ECCLevel errorCorrectionLevel;
-        if(!Enum.TryParse<QRCodeGenerator.ECCLevel>(eccLevel, out errorCorrectionLevel))
+        if(!Enum.TryParse<QRCodeGenerator.ECCLevel>(eccLevel, out var errorCorrectionLevel))
         {
             errorCorrectionLevel = QRCodeGenerator.ECCLevel.M;
         }
 
-        using (QRCodeGenerator qrGenerator = new QRCodeGenerator())
-        using (QRCodeData qrCodeData = qrGenerator.CreateQrCode(payload, errorCorrectionLevel))
-        using (PngByteQRCode qrCode = new PngByteQRCode(qrCodeData))
-        {
-            return qrCode.GetGraphic(pixelsPerModule, Converter.HexToRgba(darkColor), Converter.HexToRgba(lightColor),drawQuietZones);
-        }
+        using QRCodeGenerator qrGenerator = new QRCodeGenerator();
+        using QRCodeData qrCodeData = qrGenerator.CreateQrCode(payload, errorCorrectionLevel);
+        using PngByteQRCode qrCode = new PngByteQRCode(qrCodeData);
+        return qrCode.GetGraphic(pixelsPerModule, Converter.HexToRgba(darkColor), Converter.HexToRgba(lightColor),drawQuietZones);
     }
     
 }
